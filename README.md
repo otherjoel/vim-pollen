@@ -7,6 +7,7 @@ Syntax highlighting for [Pollen](http://docs.racket-lang.org/pollen/), a Racket 
 Supports:
 
  * Highlighting `#lang pollen` and `#lang pollen/mode <reader>`
+ * Spell checking (when enabled separately): will only spell check the non-code regions
  * Full highlighting of Racket and Pollen functions/keywords
  * Nested Racket `◊(tag …)` and Pollen `◊tag{…}` forms
  * Variables: `◊foo` or `◊|foo|`

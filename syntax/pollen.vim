@@ -99,7 +99,7 @@ syntax keyword PollenFunc ->html nextgroup=polBrackRange,polBraceRange contained
 
 syntax region polRacketRange matchgroup=Delimiter start="(" end=")" contains=@SchemeBase,PollenFunc,polExprStart
 syntax region polBrackRange  matchgroup=Delimiter start="\[" end="\]" containedin=@SchemeBase contains=@SchemeBase contained nextgroup=polBraceRange
-syntax region polBraceRange  matchgroup=Delimiter start="{" end="}" contains=polExprStart,polComment,polMultilineComment contained
+syntax region polBraceRange  matchgroup=Delimiter start="{" end="}" contains=polExprStart,polComment,polMultilineComment,@Spell contained
 syntax region polVarRange    matchgroup=Delimiter start="|" end="|" contains=polIdentifier contained
 syntax region polStringExpr start='"' end='"' contained
 syntax match polIdentifier /[-<a-z!$%&*\/:<=>?^_~0-9+.@>]\+/ nextgroup=polBraceRange,polBrackRange contained
@@ -127,5 +127,7 @@ HiLink polStringExpr       String
 HiLink polIdentifier       Identifier
 HiLink PollenFunc          Function
 delcommand HiLink
+
+syn spell toplevel
 
 let b:current_syntax = "pollen"
